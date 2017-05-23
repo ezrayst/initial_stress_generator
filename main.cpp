@@ -3,6 +3,7 @@
 //! The main code to generate points within a rectangle
 //! Input:  output of mpm_point_generator
 
+#include <algorithm>
 #include <array>
 #include <cmath>
 #include <fstream>
@@ -62,7 +63,7 @@ int main() {
               << "\n";
 
     //! Calculate stresses
-    double max_height = ycoord.back();
+    double max_height = *std::max_element(ycoord.begin(), ycoord.end());
     std::vector<unsigned> index;
     std::vector<double> ver_stress;
     std::vector<double> hor_stress;
