@@ -1,4 +1,4 @@
-#initial_stress_generator
+# initial_stress_generator
 Generation of Initial Stress
 
     1. Run `g++ -std=c++11 main.cpp -o main`
