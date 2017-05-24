@@ -13,7 +13,6 @@
 
 //! \brief    Get initial stress
 //! \details  Get input, generate initial stress, write output
-//! \tparam   Tdim (1D, 2D or 3D)
 
 int main() {
   try {
