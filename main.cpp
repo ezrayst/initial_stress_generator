@@ -3,6 +3,8 @@
 //! The main code to generate points within a rectangle
 //! Input:  output of mpm_point_generator
 
+//! Note FE consistent unit: [m] [kg] [s] [N] [Pa] [J] [m/s] [m/s/s]
+
 #include <algorithm>
 #include <array>
 #include <cmath>
@@ -33,7 +35,8 @@ int main() {
     if (outputfilename == "") outputfilename = "bin/initStressSoilP.dat";
 
     //! Get two parameters
-    double density(20.);
+    //! density is in force (N/m^3)
+    double density(20000.); 
     double k0(0.5);
 
     //! Note that y direction is vertical
