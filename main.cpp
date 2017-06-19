@@ -73,7 +73,7 @@ int main() {
     unsigned l = 0;
     for (double coord : ycoord) {
       ver_stress.emplace_back(-(max_height - coord) * density);
-      hor_stress.emplace_back(-(max_height - coord) * density * k0);
+      hor_stress.emplace_back(ver_stress.back() * k0);
       index.push_back(l);
       ++l;
     }
